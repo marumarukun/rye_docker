@@ -4,13 +4,17 @@ ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && \
-    apt-get install -y curl &&\
+    apt-get install -y curl git &&\
     apt-get upgrade -y && \
     apt-get clean
 
 WORKDIR /workspace
 
-RUN curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash \
-	&& echo 'source "$HOME/.rye/env"' >> ~/.bashrc \
-    && rye config --set-bool behavior.use-uv=true \
-    && rye sync
+ENV RYE_HOME="/opt/rye"
+ENV PATH="$RYE_HOME/shims:$PATH"
+RUN curl -sSf https://rye-up.com/get | RYE_VERSION="0.32.0" RYE_INSTALL_OPTION="--yes" bash \
+    && rye config --set-bool behavior.use-uv=true
+
+COPY . ./
+RUN rye sync
+
