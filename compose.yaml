@@ -1,0 +1,33 @@
+services:
+  # gpu:
+  #   container_name: try_rye_gpu
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   shm_size: '28gb'
+  #   volumes:
+  #     - type: bind
+  #       source: $PWD
+  #       target: /workspace
+  #   working_dir: /workspace
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             capabilities: [ gpu ]
+  #   tty: true
+
+  cpu:
+    container_name: try_rye
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: try_rye_image
+    shm_size: '16gb'
+    volumes:
+      - type: bind
+        source: $PWD
+        target: /workspace
+    working_dir: /workspace
+    tty: true
