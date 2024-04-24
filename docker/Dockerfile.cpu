@@ -18,7 +18,8 @@ ENV PATH="$RYE_HOME/shims:$PATH"
 RUN curl -sSf https://rye-up.com/get | RYE_VERSION="0.32.0" RYE_INSTALL_OPTION="--yes" bash \
     && rye config --set-bool behavior.use-uv=true
 
-# カレントディレクトリのファイルをコンテナにコピーしてrye syncを実行
-COPY . ./
+# 必要なファイルをコピーしてrye syncを実行
+COPY .python-version pyproject.toml requirements.lock \
+     requirements-dev.lock README.md ./
 RUN rye sync
 
