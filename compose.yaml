@@ -10,6 +10,9 @@ services:
       - type: bind
         source: $PWD
         target: /workspace
+      - type: volume
+        source: venv
+        target: /workspace/.venv
     working_dir: /workspace
     deploy:
       resources:
@@ -30,5 +33,12 @@ services:
       - type: bind
         source: $PWD
         target: /workspace
+        consistency: delegated
+      - type: volume
+        source: venv
+        target: /workspace/.venv
     working_dir: /workspace
     tty: true
+
+volumes:
+  venv:
