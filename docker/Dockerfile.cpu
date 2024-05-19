@@ -4,7 +4,7 @@ ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && \
-    apt-get install -y curl git &&\
+    apt-get install -y curl git gcc python3-dev &&\
     apt-get upgrade -y && \
     apt-get clean
 
@@ -22,4 +22,3 @@ RUN curl -sSf https://rye-up.com/get | RYE_VERSION="0.32.0" RYE_INSTALL_OPTION="
 COPY .python-version pyproject.toml requirements.lock \
      requirements-dev.lock README.md ./
 RUN rye sync
-
