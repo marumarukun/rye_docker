@@ -26,3 +26,7 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/workspace"]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
