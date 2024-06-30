@@ -8,7 +8,7 @@
     "powermode.shake.enabled": false,
     "editor.minimap.enabled": false,
     "editor.rulers": [
-        79
+        120
     ],
     "notebook.output.scrolling": true,
     "jupyter.askForKernelRestart": false,
