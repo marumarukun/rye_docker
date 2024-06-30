@@ -23,5 +23,17 @@
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Default Light Modern",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+      },
+      "files.exclude": {
+        "__pycache__": true,
+        ".mypy_cache": true,
+        ".pytest_cache": true,
+        ".ruff_cache": true,
+        ".venv": true,
+        // "requirements*.lock": true
+      }
 }
