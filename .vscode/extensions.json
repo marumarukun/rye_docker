@@ -12,6 +12,9 @@
         "ms-python.vscode-pylance",
         "ms-python.python",
         "shardulm94.trailing-spaces",
-        "hoovercj.vscode-power-mode"
+        "hoovercj.vscode-power-mode",
+        "charliermarsh.ruff",
+        "eamodio.gitlens",
+        "ms-python.mypy-type-checker"
     ]
 }
