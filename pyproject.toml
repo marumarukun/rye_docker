@@ -16,9 +16,9 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
-    "ruff>=0.4.1",
-    "mypy>=1.9.0",
-    "pytest>=8.1.1",
+    "ruff>=0.5.1",
+    "mypy>=1.10.1",
+    "pytest>=8.2.2",
 ]
 
 [tool.hatch.metadata]

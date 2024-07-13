@@ -37,7 +37,7 @@ jupyter-core==5.7.2
 matplotlib-inline==0.1.7
     # via ipykernel
     # via ipython
-mypy==1.9.0
+mypy==1.10.1
 mypy-extensions==1.0.0
     # via mypy
 nest-asyncio==1.6.0
@@ -53,7 +53,7 @@ pexpect==4.9.0
     # via ipython
 platformdirs==4.2.0
     # via jupyter-core
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 prompt-toolkit==3.0.43
     # via ipython
@@ -65,13 +65,13 @@ pure-eval==0.2.2
     # via stack-data
 pygments==2.17.2
     # via ipython
-pytest==8.1.1
+pytest==8.2.2
 python-dateutil==2.9.0.post0
     # via jupyter-client
 pyzmq==26.0.2
     # via ipykernel
     # via jupyter-client
-ruff==0.4.1
+ruff==0.5.1
 six==1.16.0
     # via asttokens
     # via python-dateutil
