@@ -25,8 +25,42 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/workspace"]
+packages = ["src"]
 
 [tool.ruff]
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "third_party"]
 line-length = 120
 indent-width = 4
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "auto"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+unfixable = []
+select = [
+    "A",  # flake8-builtin
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # Pyflakes
+    "I",  # isort
+    "N",  # pep8-naming
+    "W",  # pycodestyle warning
+    "PL",  # Pylint
+    "UP",  # pyupgrade
+]
+ignore = []
+
+
+[tool.rye.scripts]
+lint = { chain = ["lint:ruff", "lint:ruff_format", "lint:mypy" ] }
+"lint:ruff" = "ruff check ./ --diff"
+"lint:ruff_format" = "ruff format --check --diff"
+"lint:mypy" = "mypy ./ --explicit-package-bases"
+fmt = { chain = [ "format:ruff", "format:ruff_check" ] }
+"format:ruff" = "ruff format ./"
+"format:ruff_check" = "ruff check ./ --fix"
+test = { cmd = "pytest ./tests" }
+
