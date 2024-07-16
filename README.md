@@ -74,10 +74,8 @@ docker compose up -d --build gpu
 ### コードの整形 & リント & 型チェック & テスト実行
 ```bash
 # formatter実行
-rye fmt
-# linter実行
-rye lint
-# 型チェック
-rye run mypy src
+rye run fmt
+# linter/型チェック実行
+rye run lint
 # テスト実行
-rye test
+rye run test
