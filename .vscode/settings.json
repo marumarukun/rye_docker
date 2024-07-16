@@ -1,39 +1,52 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "autoDocstring.docstringFormat": "numpy",
-    "autoDocstring.startOnNewLine": true,
-    "git.useEditorAsCommitInput": false,
-    "powermode.combo.location": "off",
-    "powermode.enabled": true,
-    "powermode.shake.enabled": false,
-    "editor.minimap.enabled": false,
+    // Workbench settings
+    "workbench.iconTheme": "material-icon-theme", // アイコンテーマを設定
+    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue", // ダークテーマをTomorrow Night Blueに設定
+    "workbench.preferredLightColorTheme": "Default Light Modern", // ライトテーマをDefault Light Modernに設定
+    "workbench.editor.enablePreview": false, // エディタのプレビューを無効にする
+
+    // Power Mode settings
+    "powermode.combo.location": "off", // Power Modeのコンボ位置をオフに設定
+    "powermode.enabled": true, // Power Modeを有効にする
+    "powermode.shake.enabled": false, // Power Modeのシェイク効果を無効にする
+
+    // Editor settings
+    "editor.minimap.enabled": false, // エディタのミニマップを無効にする
     "editor.rulers": [
-        120
+        120 // エディタのルーラーを120文字に設定
     ],
-    "notebook.output.scrolling": true,
-    "jupyter.askForKernelRestart": false,
-    "explorer.confirmDelete": false,
-    "remote.autoForwardPortsSource": "hybrid",
-    "explorer.confirmDragAndDrop": false,
-    "git.openRepositoryInParentFolders": "never",
-    "files.insertFinalNewline": true,
-    "notebook.insertFinalNewline": true,
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue",
-    "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.editor.enablePreview": false,
-    "workbench.colorTheme": "Default Light Modern",
-    "files.autoSave": "afterDelay",
+
+    // Notebook settings
+    "notebook.output.scrolling": true, // ノートブックの出力をスクロール可能にする
+    "notebook.insertFinalNewline": true, // ノートブックの最後に改行を挿入する
+    "jupyter.askForKernelRestart": false, // Jupyterカーネルの再起動確認を無効にする
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": true,
+        "notebook.source.organizeImports": true
+  },
+
+    // Explorer settings
+    "explorer.confirmDelete": false, // ファイル削除の確認を無効にする
+    "explorer.confirmDragAndDrop": false, // ドラッグ＆ドロップの確認を無効にする
+
+    // Files settings
+    "files.insertFinalNewline": true, // ファイルの最後に改行を挿入する
+    "files.autoSave": "afterDelay", // ファイルを遅延後に自動保存する
+    "files.exclude": {
+        "src/__pycache__": true, // src/__pycache__を除外
+        ".mypy_cache": true, // .mypy_cacheを除外
+        ".pytest_cache": true, // .pytest_cacheを除外
+        ".ruff_cache": true, // .ruff_cacheを除外
+        ".venv": true, // .venvを除外
+    },
+
+    // Python settings
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.formatOnSave": true
-      },
-      "files.exclude": {
-        "src/__pycache__": true,
-        ".mypy_cache": true,
-        ".pytest_cache": true,
-        ".ruff_cache": true,
-        ".venv": true,
-        // "requirements*.lock": true
-      }
+        "editor.defaultFormatter": "charliermarsh.ruff", // Pythonのデフォルトフォーマッタをcharliermarsh.ruffに設定
+        "editor.formatOnSave": true // 保存時にフォーマットを実行する
+    },
+
+    // Window settings
+    "window.autoDetectColorScheme": true // カラースキームを自動検出する
 }
