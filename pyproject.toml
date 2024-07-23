@@ -61,9 +61,8 @@ lint = { chain = ["lint:ruff", "lint:ruff_format", "lint:mypy" ] }
 "lint:ruff" = "ruff check ./ --diff"
 "lint:ruff_format" = "ruff format --check --diff"
 "lint:mypy" = "mypy ./ --explicit-package-bases"
-fmt = { chain = [ "format:ruff", "format:ruff_notebook", "format:ruff_check" ] }
+fmt = { chain = [ "format:ruff", "format:ruff_check" ] }
 "format:ruff" = "ruff format ./"
-"format:ruff_notebook" = "sh -c 'ruff format ./notebook/*.ipynb'"
 "format:ruff_check" = "ruff check ./ --fix"
 test = { cmd = "pytest ./tests" }
 
