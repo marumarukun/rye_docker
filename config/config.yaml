@@ -1,0 +1,11 @@
+defaults:
+  - model@lgb: lgb
+  - _self_
+
+data:
+  train_path: "../data/input/train.csv"
+  test_path: "../data/input/test.csv"
+  submission_path: "../data/input/sample_submission.csv"
+  output_path: "../data/output/"
+
+seed: 42
