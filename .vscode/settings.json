@@ -1,7 +1,7 @@
 {
     // Workbench settings
     "workbench.iconTheme": "material-icon-theme", // アイコンテーマを設定
-    "workbench.preferredDarkColorTheme": "Tomorrow Night Blue", // ダークテーマをTomorrow Night Blueに設定
+    "workbench.preferredDarkColorTheme": "Monokai Dimmed", // ダークテーマをMonokai Dimmedに設定
     "workbench.preferredLightColorTheme": "Default Light Modern", // ライトテーマをDefault Light Modernに設定
     "workbench.editor.enablePreview": false, // エディタのプレビューを無効にする
 
