@@ -32,3 +32,6 @@ class Config:
         with initialize_config_dir(version_base=None, config_dir=conf_dir):
             cfg = compose(config_name="config")
             return cfg
+
+
+cfg = Config.get_cfg()
