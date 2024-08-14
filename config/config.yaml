@@ -7,5 +7,7 @@ data:
   test_path: "../data/input/test.csv"
   submission_path: "../data/input/sample_submission.csv"
   output_path: "../data/output/"
+  model_path: "../data/model/"
 
 seed: 42
+n_splits: 5
