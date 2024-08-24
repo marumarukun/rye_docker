@@ -10,7 +10,7 @@ params:
   subsample_freq: 0
   bagging_seed: 0
   feature_fraction: 0.9
-  bagging_fraction: 0.8
+  bagging_fraction: 0.9
   reg_alpha: 0.1
   reg_lambda: 0.1
 
