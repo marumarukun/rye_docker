@@ -1,5 +1,4 @@
 import polars as pl
-from sklearn.preprocessing import LabelEncoder
 
 INPUT_DIR = "data/input"
 
